@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/expandButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/expand_svgrepo_com"
+        android:text="Expand Bottom Sheet" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option2"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 4" />
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>
