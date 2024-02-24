@@ -1,45 +1,84 @@
 package com.jans.googlemap.cut.edge.app.activities
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.Manifest.permission
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.location.Location
+import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.jans.googlemap.cut.edge.app.R
+import com.jans.googlemap.cut.edge.app.databinding.ActivityFirstScreenGoogleMapBinding
+
 
 class FirstScreenGoogleMap : AppCompatActivity() {
 
 
-    lateinit var btnMap: Button
 
+    lateinit var binding: ActivityFirstScreenGoogleMapBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_first_screen_google_map)
+        binding = ActivityFirstScreenGoogleMapBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btnMap = findViewById(R.id.btnMap)
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this,R.style.CustomAlertDialogTheme)
 
-        if(checkLocationPerm()){
-            btnMap.setOnClickListener{
+
+        binding.btnMap.setOnClickListener {
+            if (checkLocationPerm()) {
                 startActivity(Intent(this@FirstScreenGoogleMap, MapScreen::class.java))
-            }
-        }
-        else{
-            ActivityCompat.requestPermissions(this,
-                arrayOf(permission.ACCESS_FINE_LOCATION), 1)
-            btnMap.setOnClickListener{
-                Toast.makeText(this, "permission denied", Toast.LENGTH_SHORT).show()
+            } else {
+                builder.setTitle("Permission Required")
+                    .setMessage("Location Permission is Important for this App")
+                    .setPositiveButton("Allow") { dialog, _ ->
+                        ActivityCompat.requestPermissions(
+                            this,
+                            arrayOf(permission.ACCESS_FINE_LOCATION), 1
+                        )
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton("Deny") { dialog, _ ->
+                        Toast.makeText(this, "permission denied", Toast.LENGTH_SHORT).show()
+                        dialog.dismiss()
+                    }
+                    .create()
+                    .show()
             }
         }
 
+        binding.btnItemsScreen.setOnClickListener{
+            if (checkLocationPerm()) {
+                startActivity(Intent(this@FirstScreenGoogleMap,ItemsScreen::class.java))
+            } else {
+                builder.setTitle("Permission Required")
+                    .setMessage("Location Permission is Important for this App")
+                    .setPositiveButton("Allow") { dialog, _ ->
+                        ActivityCompat.requestPermissions(
+                            this,
+                            arrayOf(permission.ACCESS_FINE_LOCATION), 1
+                        )
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton("Deny") { dialog, _ ->
+                        Toast.makeText(this, "permission denied", Toast.LENGTH_SHORT).show()
+                        dialog.dismiss()
+                    }
+                    .create()
+                    .show()
+            }
+        }
 
     }
 
 
-    private fun checkLocationPerm():Boolean{
+    private fun checkLocationPerm(): Boolean {
         return (checkSelfPermission(permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
     }
 

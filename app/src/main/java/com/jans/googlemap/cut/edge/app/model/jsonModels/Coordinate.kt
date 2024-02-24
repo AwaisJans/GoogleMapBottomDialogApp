@@ -1,4 +1,4 @@
-package com.jans.googlemap.cut.edge.app.model
+package com.jans.googlemap.cut.edge.app.model.jsonModels
 
 import com.google.android.gms.maps.model.Circle
 
