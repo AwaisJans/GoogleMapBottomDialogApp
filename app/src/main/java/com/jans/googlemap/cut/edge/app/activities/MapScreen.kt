@@ -3,8 +3,7 @@ package com.jans.googlemap.cut.edge.app.activities
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -14,10 +13,9 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
 import com.google.gson.Gson
 import com.jans.googlemap.cut.edge.app.R
-import com.jans.googlemap.cut.edge.app.model.MapData
+import com.jans.googlemap.cut.edge.app.model.jsonModels.MapData
 import java.io.InputStream
 
 
@@ -64,9 +62,7 @@ class MapScreen : AppCompatActivity(), OnMapReadyCallback {
 
         map?.setOnMarkerClickListener { marker ->
 
-            val modal = ModalBottomSheetDialog()
-            supportFragmentManager.let { modal.show(it, ModalBottomSheetDialog.TAG) }
-
+            Toast.makeText(this, "${marker.position}", Toast.LENGTH_SHORT).show()
             true
         }
 
