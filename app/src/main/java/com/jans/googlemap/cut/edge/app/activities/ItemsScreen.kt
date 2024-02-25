@@ -5,6 +5,10 @@ import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
+import android.view.View.GONE
+import android.view.View.VISIBLE
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -37,7 +41,7 @@ class ItemsScreen : AppCompatActivity(), OnMapReadyCallback {
         binding.mapview.getMapAsync(this)
 
 
-        binding.backBtn.setOnClickListener{
+        binding.backBtn.setOnClickListener {
             finish()
         }
 
@@ -72,6 +76,7 @@ class ItemsScreen : AppCompatActivity(), OnMapReadyCallback {
                     }
                 }
 
+
                 for (coordinate in markersList) {
                     val coordinates = LatLng(coordinate.latitude, coordinate.longitude)
                     map.addMarker(MarkerOptions().position(coordinates))
@@ -88,7 +93,10 @@ class ItemsScreen : AppCompatActivity(), OnMapReadyCallback {
                 map.setOnMarkerClickListener { marker ->
                     val markerId = Integer.parseInt(marker.id.replace("m", ""))
                     val modal = ModalBottomSheetDialog.newInstance(urlDetailList[markerId])
-                    supportFragmentManager.let { modal.show(it, "") }
+//                    modal.isCancelable = false
+
+                    modal.show(supportFragmentManager,"")
+
                     Log.d("list123", "${urlDetailList[markerId]} $markerId")
                     true
                 }

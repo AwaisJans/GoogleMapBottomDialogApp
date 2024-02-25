@@ -46,32 +46,8 @@ class ImagesAdapter(private val imagesList: List<Bild>) :
                     .into((holder.imageHolder))
 
 
-
-                val drawable = holder.imageHolder.drawable
-                val imageHeight = getImageHeight(drawable)
-
-                val maxSize = 28 // max font size
-                val density = Resources.getSystem().displayMetrics.density
-                val fontScale = Resources.getSystem().configuration.fontScale
-                val fontSizeInDp = fontScale * density
-                val newImageHeightInDp = fontSizeInDp * 2
-                val newImageHeightInPixels = (newImageHeightInDp * density + 0.5f).toInt()
-                val layoutParams = holder.imageHolder.layoutParams
-                layoutParams.height = newImageHeightInPixels+imageHeight
-
-                if(newImageHeightInPixels >= 20){
-                    layoutParams.height = newImageHeightInPixels+imageHeight
-                }
-                else{
-                    layoutParams.height = newImageHeightInPixels-imageHeight
-                }
-
-                holder.imageHolder.layoutParams = layoutParams
-
             }
-            private fun getImageHeight(drawable: Drawable): Int {
-                return drawable.intrinsicHeight
-            }
+
             class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 val imageHolder: ImageView = itemView.findViewById(R.id.imageViewer)
                 val imageName: TextView = itemView.findViewById(R.id.imgName)
